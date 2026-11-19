@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap');
+
+
+/* GENERAL STYLES */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #F0FFEB;
+    color: #000000;
+    line-height: 1.8;
+    padding: 40px 20px;
+}
+
+
+/* MAIN PROFILE HEADER */
+
+body > h1 {
+    font-family: 'Fraunces', serif;
+    text-align: center;
+    font-size: 3.5rem;
+    color: #263B29;
+    margin-top: 40px;
+    letter-spacing: 1px;
+}
+
+body > p:first-of-type {
+    text-align: center;
+    color: #638B68;
+    font-style: italic;
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+    margin-bottom: 70px;
+}
+
+
+/* SECTION HEADINGS */
+
+h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    color: #4D8054;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 65px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 3px;
+    background-color: #89C18E;
+    margin: 12px auto 0;
+    border-radius: 10px;
+}
+
+
+/* ABOUT ME */
+
+#about {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    display: block;
+    margin: 0 auto 25px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #89C18E;
+}
+
+#about p,
+h2 + p {
+    background-color: #FFFFFF;
+    padding: 35px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+}
+
+
+/* THINGS I LOVE */
+
+ul {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 30px;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+ul li {
+    background-color: #DBFFDD;
+    color: #365C3B;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+ul li:hover {
+    background-color: #89C18E;
+    color: #FFFFFF;
+    transform: translateY(-4px);
+}
+
+
+/* PASSION PROJECTS */
+
+article {
+    background-color: #FFFFFF;
+    max-width: 750px;
+    margin: 20px auto;
+    padding: 30px 35px;
+    border-radius: 18px;
+    border-left: 5px solid #89C18E;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+    transition: 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+article h3 {
+    font-family: 'Fraunces', serif;
+    color: #426B48;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+article p {
+    margin-bottom: 12px;
+    color: #555555;
+}
+
+article strong {
+    color: #4D8054;
+}
+
+time {
+    color: #666666;
+}
+
+
+/* CONTACT */
+
+body > p:last-of-type {
+    text-align: center;
+    background-color: #DBFFDD;
+    color: #365C3B;
+    max-width: 750px;
+    padding: 25px;
+    margin: 0 auto 50px;
+    border-radius: 15px;
+    font-weight: 600;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media screen and (max-width: 600px) {
+
+    body {
+        padding: 20px 15px;
+    }
+
+    body > h1 {
+        font-size: 2.3rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-top: 45px;
+    }
+
+    #about p,
+    h2 + p {
+        padding: 25px;
+        text-align: left;
+    }
+
+    .about-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    ul {
+        grid-template-columns: 1fr;
+        padding: 15px 0;
+    }
+
+    article {
+        padding: 25px;
+    }
+
+    article h3 {
+        font-size: 1.3rem;
+    }
+}
